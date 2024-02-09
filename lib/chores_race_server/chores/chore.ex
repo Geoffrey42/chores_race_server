@@ -13,6 +13,5 @@ defmodule ChoresRaceServer.Chores.Chore do
     chore
     |> Ecto.Changeset.cast(params, [:user_id, :label, :points])
     |> Ecto.Changeset.validate_required([:user_id, :label, :points])
-    
   end
 end

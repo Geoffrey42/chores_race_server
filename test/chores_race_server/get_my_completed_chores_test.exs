@@ -36,5 +36,4 @@ defmodule ChoresRaceServer.GetMyCompletedChoresTest do
 
     assert completed_chores == expected_completed_chores
   end
-  
 end

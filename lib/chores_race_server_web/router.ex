@@ -21,9 +21,10 @@ defmodule ChoresRaceServerWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ChoresRaceServerWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", ChoresRaceServerWeb do
+    pipe_through :api
+    resources "/my-completed-chores", ChoreController, only: [:show]
+  end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:chores_race_server, :dev_routes) do
